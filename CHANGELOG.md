@@ -3,7 +3,7 @@
 ## [0.2.1](https://github.com/stoatchat/for-web/compare/stoat-for-web-v0.2.0...stoat-for-web-v0.2.1) (2026-02-13)
 
 
-### Bug Fixes
+### Bug Fixes 
 
 * hot fix stoat dev server, more explicit errors (for tom 💜) ([#713](https://github.com/stoatchat/for-web/issues/713)) ([213707a](https://github.com/stoatchat/for-web/commit/213707a1f91a911c26956b97dc31cee90bb18b09))
 * prioritize masquerade name on displayed username ([#706](https://github.com/stoatchat/for-web/issues/706)) ([8fea866](https://github.com/stoatchat/for-web/commit/8fea866f585ee46d69625504280a13856fd0d7da))
