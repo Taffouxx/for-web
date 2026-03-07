@@ -355,6 +355,18 @@ msgstr "An error occurred."
 msgid "An internal error occurred. ({0})"
 msgstr "An internal error occurred. ({0})"
 
+#: components/ui/components/features/profiles/TrophyList.tsx
+#~ msgid "app.special.popovers.user_profile.trophies.earned_on"
+#~ msgstr "Earned on"
+
+#: components/ui/components/features/profiles/TrophyList.tsx
+#~ msgid "app.special.popovers.user_profile.trophies.empty_desc"
+#~ msgstr "This user hasn't earned any trophies yet"
+
+#: components/ui/components/features/profiles/TrophyList.tsx
+#~ msgid "app.special.popovers.user_profile.trophies.empty_title"
+#~ msgstr "No trophies yet"
+
 #: components/app/interface/settings/UserSettings.tsx
 #: components/app/interface/settings/user/Sync.tsx
 msgid "Appearance"
@@ -646,6 +658,7 @@ msgstr "Client Settings"
 #: components/modal/modals/UserProfileRoles.tsx
 #: components/modal/modals/UserProfileMutualGroups.tsx
 #: components/modal/modals/UserProfileMutualFriends.tsx
+#: components/modal/modals/TrophiesList.tsx
 #: components/modal/modals/ServerInfo.tsx
 #: components/modal/modals/PolicyChange.tsx
 #: components/modal/modals/LinkWarning.tsx
@@ -1970,10 +1983,6 @@ msgstr "Official Communication"
 msgid "Official Server"
 msgstr "Official Server"
 
-#: src/interface/navigation/channels/ServerSidebar.tsx
-msgid "Partner Server"
-msgstr "Partner Server"
-
 #: src/interface/navigation/channels/HomeSidebar.tsx
 #: src/interface/channels/text/MemberSidebar.tsx
 #: components/ui/components/features/profiles/ProfileStatus.tsx
@@ -2067,6 +2076,10 @@ msgstr "Pardon User"
 msgid "Partner"
 msgstr "Partner"
 
+#: src/interface/navigation/channels/ServerSidebar.tsx
+msgid "Partner Server"
+msgstr "Partner Server"
+
 #: components/modal/modals/MFAFlow.tsx
 #: components/modal/modals/MFAFlow.tsx
 #: components/auth/src/flows/Form.tsx
@@ -2138,22 +2151,6 @@ msgstr "Profile"
 msgid "Profile Bio"
 msgstr "Profile Bio"
 
-#: components/ui/components/features/profiles/ProfileTrophies.tsx
-msgid "Trophies"
-msgstr "Trophies"
-
-#: components/ui/components/features/profiles/TrophyList.tsx
-msgid "app.special.popovers.user_profile.trophies.empty_title"
-msgstr "No trophies yet"
-
-#: components/ui/components/features/profiles/TrophyList.tsx
-msgid "app.special.popovers.user_profile.trophies.empty_desc"
-msgstr "This user hasn't earned any trophies yet"
-
-#: components/ui/components/features/profiles/TrophyList.tsx
-msgid "app.special.popovers.user_profile.trophies.earned_on"
-msgstr "Earned on"
-
 #: components/modal/modals/ReportContent.tsx
 msgid "Promotes harm"
 msgstr "Promotes harm"
@@ -2203,6 +2200,10 @@ msgstr "Reason for report"
 #: components/app/interface/settings/user/Notifications.tsx
 msgid "Receive notifications while the app is open and in the background."
 msgstr "Receive notifications while the app is open and in the background."
+
+#: components/ui/components/features/profiles/TrophyList.tsx
+msgid "Received"
+msgstr "Received"
 
 #: components/ui/components/features/voice/callCard/VoiceCallCardStatus.tsx
 msgid "Reconnecting"
@@ -2842,6 +2843,12 @@ msgstr "Traditional (DD/MM/YYYY)"
 #: components/ui/components/features/messaging/composition/picker/GifPicker.tsx
 msgid "Trending GIFs"
 msgstr "Trending GIFs"
+
+#: components/ui/components/features/profiles/TrophyList.tsx
+#: components/ui/components/features/profiles/ProfileTrophies.tsx
+#: components/modal/modals/TrophiesList.tsx
+msgid "Trophies"
+msgstr "Trophies"
 
 #: components/app/menus/UserContextMenu.tsx
 msgid "Unblock user"

@@ -646,6 +646,7 @@ msgstr "Cài Đặt Ứng Dụng"
 #: components/modal/modals/UserProfileRoles.tsx
 #: components/modal/modals/UserProfileMutualGroups.tsx
 #: components/modal/modals/UserProfileMutualFriends.tsx
+#: components/modal/modals/TrophiesList.tsx
 #: components/modal/modals/ServerInfo.tsx
 #: components/modal/modals/PolicyChange.tsx
 #: components/modal/modals/LinkWarning.tsx
@@ -2063,6 +2064,10 @@ msgstr ""
 msgid "Partner"
 msgstr ""
 
+#: src/interface/navigation/channels/ServerSidebar.tsx
+msgid "Partner Server"
+msgstr ""
+
 #: components/modal/modals/MFAFlow.tsx
 #: components/modal/modals/MFAFlow.tsx
 #: components/auth/src/flows/Form.tsx
@@ -2182,6 +2187,10 @@ msgstr ""
 
 #: components/app/interface/settings/user/Notifications.tsx
 msgid "Receive notifications while the app is open and in the background."
+msgstr ""
+
+#: components/ui/components/features/profiles/TrophyList.tsx
+msgid "Received"
 msgstr ""
 
 #: components/ui/components/features/voice/callCard/VoiceCallCardStatus.tsx
@@ -2821,6 +2830,12 @@ msgstr ""
 
 #: components/ui/components/features/messaging/composition/picker/GifPicker.tsx
 msgid "Trending GIFs"
+msgstr ""
+
+#: components/ui/components/features/profiles/TrophyList.tsx
+#: components/ui/components/features/profiles/ProfileTrophies.tsx
+#: components/modal/modals/TrophiesList.tsx
+msgid "Trophies"
 msgstr ""
 
 #: components/app/menus/UserContextMenu.tsx

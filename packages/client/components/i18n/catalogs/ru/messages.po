@@ -355,6 +355,18 @@ msgstr ""
 msgid "An internal error occurred. ({0})"
 msgstr ""
 
+#: components/ui/components/features/profiles/TrophyList.tsx
+#~ msgid "app.special.popovers.user_profile.trophies.earned_on"
+#~ msgstr "Получен"
+
+#: components/ui/components/features/profiles/TrophyList.tsx
+#~ msgid "app.special.popovers.user_profile.trophies.empty_desc"
+#~ msgstr "Этот пользователь еще не заработал ни одного трофея"
+
+#: components/ui/components/features/profiles/TrophyList.tsx
+#~ msgid "app.special.popovers.user_profile.trophies.empty_title"
+#~ msgstr "Пока нет трофеев"
+
 #: components/app/interface/settings/UserSettings.tsx
 #: components/app/interface/settings/user/Sync.tsx
 msgid "Appearance"
@@ -646,6 +658,7 @@ msgstr "Настройки клиента"
 #: components/modal/modals/UserProfileRoles.tsx
 #: components/modal/modals/UserProfileMutualGroups.tsx
 #: components/modal/modals/UserProfileMutualFriends.tsx
+#: components/modal/modals/TrophiesList.tsx
 #: components/modal/modals/ServerInfo.tsx
 #: components/modal/modals/PolicyChange.tsx
 #: components/modal/modals/LinkWarning.tsx
@@ -1970,10 +1983,6 @@ msgstr "Официальное сообщение"
 msgid "Official Server"
 msgstr "Официальный сервер"
 
-#: src/interface/navigation/channels/ServerSidebar.tsx
-msgid "Partner Server"
-msgstr "Партнерский сервер"
-
 #: src/interface/navigation/channels/HomeSidebar.tsx
 #: src/interface/channels/text/MemberSidebar.tsx
 #: components/ui/components/features/profiles/ProfileStatus.tsx
@@ -2067,6 +2076,10 @@ msgstr ""
 msgid "Partner"
 msgstr ""
 
+#: src/interface/navigation/channels/ServerSidebar.tsx
+msgid "Partner Server"
+msgstr "Партнерский сервер"
+
 #: components/modal/modals/MFAFlow.tsx
 #: components/modal/modals/MFAFlow.tsx
 #: components/auth/src/flows/Form.tsx
@@ -2138,22 +2151,6 @@ msgstr "Профиль"
 msgid "Profile Bio"
 msgstr "Био профиля"
 
-#: components/ui/components/features/profiles/ProfileTrophies.tsx
-msgid "Trophies"
-msgstr "Трофеи"
-
-#: components/ui/components/features/profiles/TrophyList.tsx
-msgid "app.special.popovers.user_profile.trophies.empty_title"
-msgstr "Пока нет трофеев"
-
-#: components/ui/components/features/profiles/TrophyList.tsx
-msgid "app.special.popovers.user_profile.trophies.empty_desc"
-msgstr "Этот пользователь еще не заработал ни одного трофея"
-
-#: components/ui/components/features/profiles/TrophyList.tsx
-msgid "app.special.popovers.user_profile.trophies.earned_on"
-msgstr "Получен"
-
 #: components/modal/modals/ReportContent.tsx
 msgid "Promotes harm"
 msgstr ""
@@ -2202,6 +2199,10 @@ msgstr ""
 
 #: components/app/interface/settings/user/Notifications.tsx
 msgid "Receive notifications while the app is open and in the background."
+msgstr ""
+
+#: components/ui/components/features/profiles/TrophyList.tsx
+msgid "Received"
 msgstr ""
 
 #: components/ui/components/features/voice/callCard/VoiceCallCardStatus.tsx
@@ -2842,6 +2843,12 @@ msgstr ""
 #: components/ui/components/features/messaging/composition/picker/GifPicker.tsx
 msgid "Trending GIFs"
 msgstr ""
+
+#: components/ui/components/features/profiles/TrophyList.tsx
+#: components/ui/components/features/profiles/ProfileTrophies.tsx
+#: components/modal/modals/TrophiesList.tsx
+msgid "Trophies"
+msgstr "Трофеи"
 
 #: components/app/menus/UserContextMenu.tsx
 msgid "Unblock user"
