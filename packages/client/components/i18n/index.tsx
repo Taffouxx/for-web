@@ -4,7 +4,7 @@ import { I18nProvider as LinguiProvider } from "@lingui-solid/solid";
 import { i18n } from "@lingui/core";
 
 import { type LocaleOptions, Language, Languages } from "./Languages";
-import { messages as en } from "./catalogs/en/messages";
+import { messages as en } from "./catalogs/en/messages.mjs";
 import { initTime, loadTimeLocale } from "./dayjs";
 
 export function I18nProvider(props: { children: JSX.Element }) {
@@ -23,7 +23,7 @@ export async function loadAndSwitchLocale(
     const data =
       Languages[key].i18n === "en"
         ? en
-        : (await import(`./catalogs/${Languages[key].i18n}/messages.ts`))
+        : (await import(`./catalogs/${Languages[key].i18n}/messages.mjs`))
             .messages;
 
     i18n.load({

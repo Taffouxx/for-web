@@ -34,8 +34,8 @@ export default defineConfig({
         maximumFileSizeToCacheInBytes: 4000000,
       },
       manifest: {
-        name: "Stoat",
-        short_name: "Stoat",
+        name: "Zeelo",
+        short_name: "Zeelo",
         description: "User-first open source chat platform.",
         categories: ["communication", "chat", "messaging"],
         start_url: base,
@@ -85,6 +85,7 @@ export default defineConfig({
   resolve: {
     alias: {
       "styled-system": resolve(__dirname, "styled-system"),
+      "@assets": resolve(__dirname, "src/assets"),
       ...readdirSync(resolve(__dirname, "components")).reduce(
         (p, f) => ({
           ...p,

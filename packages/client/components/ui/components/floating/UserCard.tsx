@@ -67,6 +67,7 @@ export function UserCard(
         <Profile.Status user={props.user} />
         <Profile.Joined user={props.user} member={props.member} />
         <Profile.Bio content={query.data?.content} onClick={openFull} />
+        <Profile.Trophies trophies={props.user?.trophies} onClose={props.onClose} />
       </Grid>
     </div>
   );
@@ -80,3 +81,5 @@ const Grid = styled("div", {
     gridTemplateColumns: "repeat(2, 1fr)",
   },
 });
+
+

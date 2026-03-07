@@ -1,4 +1,5 @@
 import { mergeProps, splitProps } from "solid-js";
+import { TrophiesListModal } from "./modals/TrophiesList";
 
 import { CONFIGURATION } from "@revolt/common";
 
@@ -53,6 +54,7 @@ import { ServerInfoModal } from "./modals/ServerInfo";
 import { SettingsModal } from "./modals/Settings";
 import { SignOutSessionsModal } from "./modals/SignOutSessions";
 import { SignedOutModal } from "./modals/SignedOut";
+import TrophyModal from "./modals/Trophy";
 import { UserProfileModal } from "./modals/UserProfile";
 import { UserProfileMutualFriendsModal } from "./modals/UserProfileMutualFriends";
 import { UserProfileMutualGroupsModal } from "./modals/UserProfileMutualGroups";
@@ -183,6 +185,10 @@ export function RenderModal(props: ActiveModal & { onClose: () => void }) {
       return <ResetBotTokenModal {...modalProps} />;
     case "edit_category":
       return <EditCategoryModal {...modalProps} />;
+    case "trophy":
+      return <TrophyModal {...modalProps} />;
+    case "trophies_list":
+      return <TrophiesListModal {...modalProps} />;
 
     default:
       console.error(
@@ -192,3 +198,8 @@ export function RenderModal(props: ActiveModal & { onClose: () => void }) {
       );
   }
 }
+
+
+
+
+

@@ -448,6 +448,10 @@ msgstr ""
 msgid "Bans"
 msgstr "Баны"
 
+#: components/ui/components/features/profiles/ProfileBadges.tsx
+msgid "Battle Pass"
+msgstr ""
+
 #: components/app/menus/UserContextMenu.tsx
 msgid "Block user"
 msgstr "Заблокировать пользователя"
@@ -1022,6 +1026,10 @@ msgstr ""
 msgid "Description provided by {0}"
 msgstr ""
 
+#: components/ui/components/features/profiles/ProfileBadges.tsx
+msgid "Designer"
+msgstr ""
+
 #: components/app/interface/settings/UserSettings.tsx
 msgid "Desktop"
 msgstr ""
@@ -1057,6 +1065,10 @@ msgstr ""
 msgid "Discover Stoat"
 msgstr ""
 
+#: src/interface/Home.tsx
+#~ msgid "Discover Zeelo"
+#~ msgstr "Открыть Zeelo"
+
 #: components/app/interface/settings/user/appearance/AppearanceMenu.tsx
 msgid "Display & Text"
 msgstr ""
@@ -1089,9 +1101,13 @@ msgstr ""
 msgid "Donate to Stoat"
 msgstr ""
 
+#: src/interface/Home.tsx
+#~ msgid "Donate to Zeelo"
+#~ msgstr "Пожертвовать Zeelo"
+
 #: components/ui/components/features/profiles/ProfileBadges.tsx
-msgid "Donated to Stoat"
-msgstr ""
+msgid "Donated to Zeelo"
+msgstr "Пожертвовал Zeelo"
 
 #: components/modal/modals/MFARecovery.tsx
 msgid "Done"
@@ -1327,6 +1343,10 @@ msgstr ""
 msgid "Give feedback on Stoat"
 msgstr ""
 
+#: src/interface/Home.tsx
+#~ msgid "Give feedback on Zeelo"
+#~ msgstr "Дать обратную связь о Zeelo"
+
 #: components/modal/modals/ReportContent.tsx
 msgid "Give us some detail"
 msgstr ""
@@ -1352,6 +1372,11 @@ msgstr ""
 #: src/interface/Home.tsx
 #~ msgid "Go to the testers server"
 #~ msgstr "Перейти на сервер тестировщиков"
+
+#: src/interface/Home.tsx
+#: components/app/interface/settings/user/Feedback.tsx
+#~ msgid "Go to the Zeelo Lounge"
+#~ msgstr "Перейти в Zeelo Lounge"
 
 #: components/modal/modals/Onboarding.tsx
 msgid "Good"
@@ -1389,8 +1414,8 @@ msgid "Help contribute to an existing or new language"
 msgstr ""
 
 #: components/ui/components/features/profiles/ProfileBadges.tsx
-msgid "Helped translate Stoat"
-msgstr ""
+msgid "Helped translate Zeelo"
+msgstr "Помог с переводом Zeelo"
 
 #. placeholder {0}: link()
 #: components/modal/modals/CreateInvite.tsx
@@ -1436,6 +1461,10 @@ msgstr ""
 #: components/app/interface/settings/user/Native.tsx
 msgid "Instead of closing, Stoat will hide in your tray."
 msgstr ""
+
+#: components/app/interface/settings/user/Native.tsx
+#~ msgid "Instead of closing, Zeelo will hide in your tray."
+#~ msgstr "Вместо закрытия Zeelo будет скрыт в трее."
 
 #: components/app/interface/settings/user/appearance/AppearanceMenu.tsx
 msgid "Interface Font"
@@ -1504,6 +1533,11 @@ msgstr ""
 msgid "Join the voice channel"
 msgstr ""
 
+#: src/interface/Home.tsx
+#: components/app/interface/settings/user/Feedback.tsx
+#~ msgid "Join the Zeelo Lounge"
+#~ msgstr "Присоединиться к Zeelo Lounge"
+
 #: components/ui/components/features/profiles/ProfileJoined.tsx
 #: components/ui/components/features/messaging/elements/Invite.tsx
 msgid "Joined"
@@ -1558,9 +1592,17 @@ msgstr "Последние"
 msgid "Launch Stoat when you log into your computer."
 msgstr ""
 
+#: components/app/interface/settings/user/Native.tsx
+#~ msgid "Launch Zeelo when you log into your computer."
+#~ msgstr "Запускать Zeelo при входе в систему."
+
 #: components/app/interface/settings/user/bots/MyBots.tsx
 msgid "Learn more about how to create bots on Stoat."
 msgstr ""
+
+#: components/app/interface/settings/user/bots/MyBots.tsx
+#~ msgid "Learn more about how to create bots on Zeelo."
+#~ msgstr "Узнайте больше о создании ботов в Zeelo."
 
 #: components/modal/modals/LeaveServer.tsx
 #: components/modal/modals/DeleteChannel.tsx
@@ -1589,6 +1631,10 @@ msgstr ""
 #: src/interface/Home.tsx
 msgid "Let us know how we can improve our app by giving us feedback."
 msgstr "Дайте нам знать, как мы можем улучшить наше приложение, оставив нам отзыв."
+
+#: components/app/interface/settings/user/Native.tsx
+#~ msgid "Let Zeelo use its own custom titlebar."
+#~ msgstr "Разрешить Zeelo использовать собственную заголовную панель."
 
 #: components/app/interface/settings/user/appearance/AppearanceMenu.tsx
 msgid "Light"
@@ -1877,6 +1923,10 @@ msgstr ""
 msgid "New to the server"
 msgstr ""
 
+#: components/app/interface/channels/text/Message.tsx
+#~ msgid "New to Zeelo"
+#~ msgstr "Новичок в Zeelo"
+
 #: components/modal/modals/ServerIdentity.tsx
 msgid "Nickname"
 msgstr "Никнейм"
@@ -1919,6 +1969,10 @@ msgstr "Официальное сообщение"
 #: src/interface/navigation/channels/ServerSidebar.tsx
 msgid "Official Server"
 msgstr "Официальный сервер"
+
+#: src/interface/navigation/channels/ServerSidebar.tsx
+msgid "Partner Server"
+msgstr "Партнерский сервер"
 
 #: src/interface/navigation/channels/HomeSidebar.tsx
 #: src/interface/channels/text/MemberSidebar.tsx
@@ -2007,6 +2061,12 @@ msgstr "Обзор"
 msgid "Pardon User"
 msgstr ""
 
+#: components/ui/components/features/profiles/ProfileBadges.tsx
+#: components/ui/components/features/profiles/ProfileBadges.tsx
+#: components/ui/components/features/profiles/ProfileBadges.tsx
+msgid "Partner"
+msgstr ""
+
 #: components/modal/modals/MFAFlow.tsx
 #: components/modal/modals/MFAFlow.tsx
 #: components/auth/src/flows/Form.tsx
@@ -2076,7 +2136,23 @@ msgstr "Профиль"
 
 #: components/app/interface/settings/user/profile/UserProfileEditor.tsx
 msgid "Profile Bio"
-msgstr ""
+msgstr "Био профиля"
+
+#: components/ui/components/features/profiles/ProfileTrophies.tsx
+msgid "Trophies"
+msgstr "Трофеи"
+
+#: components/ui/components/features/profiles/TrophyList.tsx
+msgid "app.special.popovers.user_profile.trophies.empty_title"
+msgstr "Пока нет трофеев"
+
+#: components/ui/components/features/profiles/TrophyList.tsx
+msgid "app.special.popovers.user_profile.trophies.empty_desc"
+msgstr "Этот пользователь еще не заработал ни одного трофея"
+
+#: components/ui/components/features/profiles/TrophyList.tsx
+msgid "app.special.popovers.user_profile.trophies.earned_on"
+msgstr "Получен"
 
 #: components/modal/modals/ReportContent.tsx
 msgid "Promotes harm"
@@ -2204,6 +2280,10 @@ msgstr ""
 #: components/app/interface/settings/user/Native.tsx
 msgid "Rep Stoat using Discord rich presence."
 msgstr ""
+
+#: components/app/interface/settings/user/Native.tsx
+#~ msgid "Rep Zeelo using Discord rich presence."
+#~ msgstr "Показать Zeelo в статусе Discord."
 
 #: components/app/menus/MessageContextMenu.tsx
 msgid "Reply"
@@ -2483,6 +2563,10 @@ msgstr ""
 msgid "Sign into Stoat"
 msgstr ""
 
+#: components/auth/src/flows/FlowLogin.tsx
+#~ msgid "Sign into Zeelo"
+#~ msgstr "Войти в Zeelo"
+
 #: components/auth/src/flows/FlowHome.tsx
 msgid "Sign Up"
 msgstr ""
@@ -2549,19 +2633,7 @@ msgid "Status"
 msgstr ""
 
 #: components/app/interface/settings/user/Native.tsx
-#~ msgid "Stoat Desktop"
-#~ msgstr ""
-
-#: components/ui/components/features/profiles/ProfileBadges.tsx
-msgid "Stoat Developer"
-msgstr ""
-
-#: components/app/interface/settings/user/Native.tsx
 msgid "Stoat for Desktop"
-msgstr ""
-
-#: components/ui/components/features/profiles/ProfileBadges.tsx
-msgid "Stoat Founder"
 msgstr ""
 
 #: components/auth/src/flows/FlowHome.tsx
@@ -2591,6 +2663,10 @@ msgstr ""
 #: components/app/interface/settings/user/Feedback.tsx
 msgid "Suggest new Stoat features on GitHub discussions."
 msgstr ""
+
+#: components/app/interface/settings/user/Feedback.tsx
+#~ msgid "Suggest new Zeelo features on GitHub discussions."
+#~ msgstr "Предложите новые функции Zeelo в обсуждениях GitHub."
 
 #: src/interface/Home.tsx
 msgid "Support the project by donating - thank you!"
@@ -2773,8 +2849,8 @@ msgstr "Разблокировать пользователя"
 
 #. placeholder {0}: err.type
 #: components/i18n/errors.ts
-msgid "Uncaught Stoat error: {0}"
-msgstr ""
+msgid "Uncaught Zeelo error: {0}"
+msgstr "Необработанная ошибка Zeelo: {0}"
 
 #: components/markdown/plugins/anchors.tsx
 msgid "Unknown Server"
@@ -3161,6 +3237,10 @@ msgstr ""
 msgid "You've been signed out of Stoat!"
 msgstr ""
 
+#: components/modal/modals/SignedOut.tsx
+#~ msgid "You've been signed out of Zeelo!"
+#~ msgstr "Вы вышли из Zeelo!"
+
 #: components/i18n/errors.ts
 msgid "You've reached your personal bot limit."
 msgstr ""
@@ -3197,3 +3277,27 @@ msgstr ""
 #: components/i18n/errors.ts
 msgid "Your user has already been created? Try logging in again or refreshing the app."
 msgstr ""
+
+#: components/app/interface/settings/user/Native.tsx
+#~ msgid "Zeelo Desktop"
+#~ msgstr ""
+
+#: components/ui/components/features/profiles/ProfileBadges.tsx
+msgid "Zeelo Developer"
+msgstr "Разработчик Zeelo"
+
+#: components/app/interface/settings/user/Native.tsx
+#~ msgid "Zeelo for Desktop"
+#~ msgstr "Zeelo для компьютера"
+
+#: components/ui/components/features/profiles/ProfileBadges.tsx
+msgid "Zeelo Founder"
+msgstr "Основатель Zeelo"
+
+#: components/auth/src/flows/FlowHome.tsx
+#~ msgid "Zeelo is one of the best ways to stay connected with your friends and community, anywhere, anytime."
+#~ msgstr "Zeelo - один из лучших способов оставаться на связи с друзьями и сообществом в любое время и в любом месте."
+
+#: components/app/interface/settings/user/Native.tsx
+#~ msgid "Zeelo will start in the system tray."
+#~ msgstr "Zeelo запустится в системном трее."

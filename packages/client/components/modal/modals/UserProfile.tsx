@@ -49,6 +49,8 @@ export function UserProfileModal(
         <Profile.Joined user={props.user} />
         <Profile.Mutuals user={props.user} />
         <Profile.Bio content={query.data?.content} full />
+        {console.log("user trophies:", props.user.trophies)}
+        <Profile.Trophies trophies={props.user.trophies} />
       </Grid>
     </Dialog>
   );
@@ -62,3 +64,4 @@ const Grid = styled("div", {
     gridTemplateColumns: "repeat(3, 1fr)",
   },
 });
+

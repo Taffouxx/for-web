@@ -10,7 +10,8 @@ import {
 } from "solid-js";
 
 import { useLingui } from "@lingui-solid/solid/macro";
-import type { API, Channel, Server, ServerFlags } from "stoat.js";
+import type { API, Channel, Server } from "stoat.js";
+import { ServerFlags } from "stoat.js";
 import { styled } from "styled-system/jsx";
 
 import { KeybindAction, createKeybind } from "@revolt/keybinds";
@@ -39,6 +40,8 @@ import { Symbol } from "@revolt/ui/components/utils/Symbol";
 import MdChevronRight from "@material-design-icons/svg/filled/chevron_right.svg?component-solid";
 
 import MdSettings from "@material-symbols/svg-400/outlined/settings-fill.svg?component-solid";
+
+import PartnerBadge from "@assets/badges/partner1.svg?component-solid";
 
 import { SidebarBase } from "./common";
 
@@ -303,11 +306,13 @@ function ServerBadge(props: { flags: ServerFlags }) {
   return (
     <Show when={props.flags}>
       <Tooltip
-        content={props.flags === 1 ? t`Official Server` : t`Verified`}
+        content={props.flags === ServerFlags.Official ? t`Official Server` : props.flags === ServerFlags.Partner ? t`Partner Server` : t`Verified`}
         placement="top"
       >
-        {props.flags === 1 ? (
+        {props.flags === ServerFlags.Official ? (
           <BiSolidCheckCircle size={12} />
+        ) : props.flags === ServerFlags.Partner ? (
+          <PartnerBadge {...iconSize(12)} />
         ) : (
           <BiRegularCheckCircle size={12} />
         )}

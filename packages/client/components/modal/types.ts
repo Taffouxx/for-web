@@ -314,4 +314,29 @@ export type Modals =
       type: "edit_category";
       server: Server;
       category: CategoryData;
-    };
+    }
+
+  | {
+      type: "trophies_list";
+      trophies: Array<{
+        id: string;
+        title: string;
+        description?: string;
+        icon?: string;
+        date?: string;
+      }>;
+    }
+
+  | {
+      type: "trophy";
+      trophy: {
+        id: string;
+        title: string;
+        description?: string;
+        icon?: string;
+        date?: string;
+      };
+    }
+  ;
+
+
