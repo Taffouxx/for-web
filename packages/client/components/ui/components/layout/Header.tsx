@@ -32,15 +32,29 @@ export const Header = styled("div", {
     "& svg": {
       flexShrink: 0,
     },
+
+    "@media (max-width: 768px)": {
+      borderRadius: 0,
+      padding: "0 12px",
+      height: "44px",
+    },
   },
   variants: {
     placement: {
       primary: {
         margin: "var(--gap-md) var(--gap-md) var(--gap-md) 0",
+
+        "@media (max-width: 768px)": {
+          margin: "0",
+        },
       },
       secondary: {
         margin: "var(--gap-md)",
         backgroundColor: "var(--md-sys-color-surface-variant)",
+
+        "@media (max-width: 768px)": {
+          margin: "0",
+        },
       },
     },
     image: {

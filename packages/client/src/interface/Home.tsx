@@ -55,6 +55,11 @@ const content = cva({
     gap: "32px",
     alignItems: "center",
     justifyContent: "center",
+
+    "@media (max-width: 768px)": {
+      padding: "24px 16px",
+      gap: "20px",
+    },
   },
 });
 
@@ -70,6 +75,11 @@ const Buttons = styled("div", {
 
     color: "var(--md-sys-color-on-surface-variant)",
     background: "var(--md-sys-color-surface-variant)",
+
+    "@media (max-width: 768px)": {
+      flexDirection: "column",
+      width: "100%",
+    },
   },
 });
 
@@ -84,6 +94,11 @@ const SeparatedColumn = styled(Column, {
     "& > *": {
       flexGrow: 1,
     },
+
+    "@media (max-width: 768px)": {
+      width: "100%",
+      marginInline: 0,
+    },
   },
 });
 
@@ -95,7 +110,7 @@ export function HomePage() {
   const navigate = useNavigate();
   const client = useClient();
 
-  // check if we're stoat.chat; if so, check if the user is in the Lounge
+  // check if we're zeelo.chat; if so, check if user is in Lounge
   const showLoungeButton = CONFIGURATION.IS_STOAT;
   const isInLounge =
     client()!.servers.get("01F7ZSBSFHQ8TA81725KQCSDDP") !== undefined;
@@ -112,7 +127,7 @@ export function HomePage() {
         <Column>
           <Wordmark
             class={css({
-              width: "160px",
+              width: "300px",
               fill: "var(--md-sys-color-on-surface)",
             })}
           />
@@ -127,10 +142,7 @@ export function HomePage() {
                 })
               }
               description={
-                <Trans>
-                  Invite all of your friends, some cool bots, and throw a big
-                  party.
-                </Trans>
+                <Trans>Invite all of your friends, some cool bots, and throw a big party.</Trans>
               }
               icon={<MdAddCircle />}
             >
@@ -141,14 +153,11 @@ export function HomePage() {
                 <CategoryButton
                   onClick={() => navigate("/server/01F7ZSBSFHQ8TA81725KQCSDDP")}
                   description={
-                    <Trans>
-                      You can report issues and discuss improvements with us
-                      directly here.
-                    </Trans>
+                    <Trans>You can report issues and discuss improvements with us directly here.</Trans>
                   }
                   icon={<MdGroups3 />}
                 >
-                  <Trans>Go to the Stoat Lounge</Trans>
+                  <Trans>Go to Zeelo Lounge</Trans>
                 </CategoryButton>
               </Match>
               <Match when={showLoungeButton && !isInLounge}>
@@ -162,14 +171,11 @@ export function HomePage() {
                       .then((invite) => openModal({ type: "invite", invite }));
                   }}
                   description={
-                    <Trans>
-                      You can report issues and discuss improvements with us
-                      directly here.
-                    </Trans>
+                    <Trans>You can report issues and discuss improvements with us directly here.</Trans>
                   }
                   icon={<MdGroups3 />}
                 >
-                  <Trans>Join the Stoat Lounge</Trans>
+                  <Trans>Join Zeelo Lounge</Trans>
                 </CategoryButton>
               </Match>
             </Switch>
@@ -185,7 +191,7 @@ export function HomePage() {
               }
               icon={<MdPayments />}
             >
-              <Trans>Donate to Stoat</Trans>
+              <Trans>Donate to Zeelo</Trans>
             </CategoryButton>
           </SeparatedColumn>
           <SeparatedColumn>
@@ -193,13 +199,11 @@ export function HomePage() {
               <CategoryButton
                 onClick={() => navigate("/discover")}
                 description={
-                  <Trans>
-                    Find a community based on your hobbies or interests.
-                  </Trans>
+                  <Trans>Find a community based on your hobbies or interests.</Trans>
                 }
                 icon={<MdExplore />}
               >
-                <Trans>Discover Stoat</Trans>
+                <Trans>Discover Zeelo</Trans>
               </CategoryButton>
             </Show>
             <CategoryButton
@@ -211,20 +215,16 @@ export function HomePage() {
                 })
               }
               description={
-                <Trans>
-                  Let us know how we can improve our app by giving us feedback.
-                </Trans>
+                  <Trans>Let us know how we can improve our app by giving us feedback.</Trans>
               }
               icon={<MdRateReview {...iconSize(22)} />}
             >
-              <Trans>Give feedback on Stoat</Trans>
+              <Trans>Give feedback on Zeelo</Trans>
             </CategoryButton>
             <CategoryButton
               onClick={() => openModal({ type: "settings", config: "user" })}
               description={
-                <Trans>
-                  You can also click the gear icon in the bottom left.
-                </Trans>
+                  <Trans>You can also click the gear icon in the bottom left.</Trans>
               }
               icon={<MdSettings />}
             >
@@ -234,10 +234,11 @@ export function HomePage() {
         </Buttons>
         <Show when={IS_DEV}>
           <Button onPress={() => navigate("/dev")}>
-            Open Development Page
+            <Trans>Open Development Page</Trans>
           </Button>
         </Show>
       </div>
     </Base>
   );
 }
+

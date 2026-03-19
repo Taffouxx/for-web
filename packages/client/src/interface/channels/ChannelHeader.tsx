@@ -242,8 +242,12 @@ export function ChannelHeader(props: Props) {
             paddingInline: "16px",
             borderRadius: "var(--borderRadius-full)",
             background: "var(--md-sys-color-surface-container-high)",
+
+            "@media (max-width: 768px)": {
+              display: "none",
+            },
           })}
-          placeholder="Search messages..."
+          placeholder={t`Search messages...`}
           value={searchValue()!}
           onChange={(e) =>
             e.currentTarget.value
@@ -270,6 +274,10 @@ const Divider = styled("div", {
     margin: "0px 5px",
     paddingLeft: "1px",
     backgroundColor: "var(--md-sys-color-outline-variant)",
+
+    "@media (max-width: 768px)": {
+      display: "none",
+    },
   },
 });
 
@@ -278,4 +286,8 @@ const Divider = styled("div", {
  */
 const descriptionLink = css({
   minWidth: 0,
+
+  "@media (max-width: 768px)": {
+    display: "none",
+  },
 });

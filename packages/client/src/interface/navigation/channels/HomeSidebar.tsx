@@ -25,6 +25,7 @@ import { Symbol } from "@revolt/ui/components/utils/Symbol";
 
 import MdClose from "@material-design-icons/svg/outlined/close.svg?component-solid";
 
+import { MobileBottomBar } from "../servers/MobileBottomBar";
 import { SidebarBase } from "./common";
 
 interface Props {
@@ -67,7 +68,11 @@ export const HomeSidebar = (props: Props) => {
 
   return (
     <SidebarBase>
-      <div ref={scrollTargetElement} use:invisibleScrollable>
+      <div
+        ref={scrollTargetElement}
+        use:invisibleScrollable
+        style={{ "flex-grow": 1 }}
+      >
         <List>
           <SidebarTitle>
             <Trans>Conversations</Trans>
@@ -193,6 +198,7 @@ export const HomeSidebar = (props: Props) => {
           </Deferred>
         </List>
       </div>
+      <MobileBottomBar />
     </SidebarBase>
   );
 };
@@ -402,5 +408,9 @@ const List = styled("div", {
   base: {
     paddingLeft: "var(--gap-md)",
     width: "var(--layout-width-channel-sidebar)",
+
+    "@media (max-width: 768px)": {
+      width: "100%",
+    },
   },
 });

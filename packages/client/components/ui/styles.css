@@ -24,6 +24,29 @@ body {
   bottom: env(safe-area-inset-bottom);
 }
 
+/* Mobile responsive — applied globally */
+@media (max-width: 768px) {
+  body {
+    overflow-x: hidden;
+  }
+
+  #root {
+    overflow: hidden;
+  }
+
+  /* Hide scrollbars on mobile */
+  ::-webkit-scrollbar {
+    width: 0;
+    height: 0;
+  }
+
+  /* Minimum touch target size for interactive elements */
+  button,
+  a {
+    min-height: 36px;
+  }
+}
+
 /* HighlightJs */
 /*!
   Theme: GitHub Dark

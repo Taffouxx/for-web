@@ -11,8 +11,6 @@ export const SidebarBase = styled("div", {
     overflow: "hidden",
     borderTopLeftRadius: "var(--borderRadius-lg)",
     borderBottomLeftRadius: "var(--borderRadius-lg)",
-    // borderRadius: "var(--borderRadius-lg)",
-    // margin: "var(--gap-md) var(--gap-md) var(--gap-md) 0",
     width: "var(--layout-width-channel-sidebar)",
 
     fill: "var(--md-sys-color-on-surface)",
@@ -21,6 +19,17 @@ export const SidebarBase = styled("div", {
 
     "& a": {
       textDecoration: "none",
+    },
+
+    /**
+     * On mobile: sidebar fills all space next to the ServerList (56px).
+     * Since Content is hidden (display:none) on the sidebar panel,
+     * this naturally takes the full remaining width.
+     */
+    "@media (max-width: 768px)": {
+      width: "calc(100vw - 56px)",
+      borderRadius: 0,
+      flexShrink: 1,
     },
   },
 });

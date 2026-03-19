@@ -1,5 +1,6 @@
 import { Component, Match, Switch, createMemo } from "solid-js";
 
+import { Trans } from "@lingui-solid/solid/macro";
 import { Channel } from "stoat.js";
 import { styled } from "styled-system/jsx";
 
@@ -43,7 +44,7 @@ export const ChannelPage: Component = () => {
 
   return (
     <Base>
-      <Switch fallback="Unknown channel type!">
+      <Switch fallback={<Trans>Unknown channel type!</Trans>}>
         <Match when={!channel()}>
           <Navigate href={"../.."} />
         </Match>

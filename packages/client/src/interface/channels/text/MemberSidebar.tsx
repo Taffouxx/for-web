@@ -327,6 +327,12 @@ const Container = styled("div", {
   base: {
     paddingRight: "var(--gap-md)",
     width: "var(--layout-width-channel-sidebar)",
+
+    "@media (max-width: 768px)": {
+      width: "100%",
+      paddingRight: 0,
+      paddingInline: "var(--gap-md)",
+    },
   },
 });
 

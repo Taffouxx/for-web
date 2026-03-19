@@ -1,4 +1,5 @@
 import {
+  JSX,
   Match,
   Show,
   Switch,
@@ -6,7 +7,9 @@ import {
   createSignal,
   on,
   onCleanup,
+  onMount,
 } from "solid-js";
+import { Portal } from "solid-js/web";
 
 import { cva } from "styled-system/css";
 import { styled } from "styled-system/jsx";
@@ -221,65 +224,97 @@ export function TextChannel(props: ChannelPageProps) {
             sidebarState().state !== "default"
           }
         >
-          <div
-            ref={sidebarScrollTargetElement}
-            use:scrollable={{
-              direction: "y",
-              showOnHover: true,
-              class: sidebar(),
-            }}
-            style={{
-              width: sidebarState().state !== "default" ? "360px" : "",
-            }}
-          >
-            <Switch
-              fallback={
-                <MemberSidebar
-                  channel={props.channel}
-                  scrollTargetElement={sidebarScrollTargetElement}
-                />
-              }
+          <MemberSidebarMobileWrapper>
+            <div
+              ref={sidebarScrollTargetElement}
+              use:scrollable={{
+                direction: "y",
+                showOnHover: true,
+                class: sidebar(),
+              }}
+              style={{
+                width: sidebarState().state !== "default" ? "360px" : "",
+              }}
             >
-              <Match when={sidebarState().state === "search"}>
-                <WideSidebarContainer>
-                  <SidebarTitle>
-                    <Text class="label" size="large">
-                      Search Results
-                    </Text>
-                  </SidebarTitle>
-                  <TextSearchSidebar
+              <Switch
+                fallback={
+                  <MemberSidebar
                     channel={props.channel}
-                    query={{
-                      query: (sidebarState() as { query: string }).query,
-                    }}
+                    scrollTargetElement={sidebarScrollTargetElement}
                   />
-                </WideSidebarContainer>
-              </Match>
-              <Match when={sidebarState().state === "pins"}>
-                <WideSidebarContainer>
-                  <SidebarTitle>
-                    <Text class="label" size="large">
-                      Pinned Messages
-                    </Text>
-                  </SidebarTitle>
-                  <TextSearchSidebar
-                    channel={props.channel}
-                    query={{ pinned: true, sort: "Latest" }}
-                  />
-                </WideSidebarContainer>
-              </Match>
-            </Switch>
-
-            <Show when={sidebarState().state !== "default"}>
-              <Keybind
-                keybind={KeybindAction.CLOSE_SIDEBAR}
-                onPressed={() => setSidebarState({ state: "default" })}
-              />
-            </Show>
-          </div>
+                }
+              >
+                <Match when={sidebarState().state === "search"}>
+                  <WideSidebarContainer>
+                    <SidebarTitle>
+                      <Text class="label" size="large">
+                        Search Results
+                      </Text>
+                    </SidebarTitle>
+                    <TextSearchSidebar
+                      channel={props.channel}
+                      query={{
+                        query: (sidebarState() as { query: string }).query,
+                      }}
+                    />
+                  </WideSidebarContainer>
+                </Match>
+                <Match when={sidebarState().state === "pins"}>
+                  <WideSidebarContainer>
+                    <SidebarTitle>
+                      <Text class="label" size="large">
+                        Pinned Messages
+                      </Text>
+                    </SidebarTitle>
+                    <TextSearchSidebar
+                      channel={props.channel}
+                      query={{ pinned: true, sort: "Latest" }}
+                    />
+                  </WideSidebarContainer>
+                </Match>
+              </Switch>
+  
+              <Show when={sidebarState().state !== "default"}>
+                <Keybind
+                  keybind={KeybindAction.CLOSE_SIDEBAR}
+                  onPressed={() => setSidebarState({ state: "default" })}
+                />
+              </Show>
+            </div>
+          </MemberSidebarMobileWrapper>
         </Show>
       </Content>
     </>
+  );
+}
+
+/**
+ * Mobile wrapper for the member sidebar (uses a portal if on mobile).
+ */
+function MemberSidebarMobileWrapper(props: { children: JSX.Element }) {
+  const [isMobile, setIsMobile] = createSignal(
+    typeof window !== "undefined" && window.innerWidth <= 768,
+  );
+
+  const [portalTarget, setPortalTarget] = createSignal<HTMLElement | null>(null);
+
+  onMount(() => {
+    if (typeof window === "undefined") return;
+    setPortalTarget(document.getElementById("mobile-members-portal"));
+
+    const mq = window.matchMedia("(max-width: 768px)");
+    const handler = (e: MediaQueryListEvent) => setIsMobile(e.matches);
+    mq.addEventListener("change", handler);
+    onCleanup(() => mq.removeEventListener("change", handler));
+  });
+
+  return (
+    <Show
+      when={isMobile() && portalTarget()}
+      fallback={<>{props.children}</>}
+    >
+      <Portal mount={portalTarget()!}>{props.children}</Portal>
+    </Show>
   );
 }
 
@@ -293,6 +328,10 @@ const Content = styled("div", {
     flexGrow: 1,
     minWidth: 0,
     minHeight: 0,
+
+    "@media (max-width: 768px)": {
+      position: "relative",
+    },
   },
 });
 
@@ -303,10 +342,15 @@ const sidebar = cva({
   base: {
     flexShrink: 0,
     width: "var(--layout-width-channel-sidebar)",
-    // margin: "var(--gap-md)",
     borderRadius: "var(--borderRadius-lg)",
-    // color: "var(--colours-sidebar-channels-foreground)",
-    // background: "var(--colours-sidebar-channels-background)",
+
+    "@media (max-width: 768px)": {
+      position: "relative",
+      height: "100%",
+      width: "100vw",
+      borderRadius: 0,
+      background: "var(--md-sys-color-surface-container-low)",
+    },
   },
 });
 
@@ -317,6 +361,12 @@ const WideSidebarContainer = styled("div", {
   base: {
     paddingRight: "var(--gap-md)",
     width: "360px",
+
+    "@media (max-width: 768px)": {
+      width: "100%",
+      paddingRight: 0,
+      paddingInline: "var(--gap-md)",
+    },
   },
 });
 

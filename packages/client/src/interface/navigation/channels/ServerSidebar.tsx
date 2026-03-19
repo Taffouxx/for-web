@@ -43,6 +43,7 @@ import MdSettings from "@material-symbols/svg-400/outlined/settings-fill.svg?com
 
 import PartnerBadge from "@assets/badges/partner1.svg?component-solid";
 
+import { MobileBottomBar } from "../servers/MobileBottomBar";
 import { SidebarBase } from "./common";
 
 interface Props {
@@ -251,6 +252,7 @@ export const ServerSidebar = (props: Props) => {
           )}
         </Draggable>
       </div>
+      <MobileBottomBar />
     </SidebarBase>
   );
 };

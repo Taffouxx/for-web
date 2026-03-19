@@ -20,5 +20,11 @@ export const main = cva({
     marginBlockEnd: "var(--gap-md)",
     borderRadius: "var(--borderRadius-xl)",
     background: "var(--md-sys-color-surface-container-lowest)",
+
+    "@media (max-width: 768px)": {
+      marginInline: 0,
+      marginBlockEnd: 0,
+      borderRadius: 0,
+    },
   },
 });

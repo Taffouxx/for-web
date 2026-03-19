@@ -1,4 +1,11 @@
-import { Component, JSX, Match, Show, Switch, createMemo } from "solid-js";
+import {
+  Component,
+  JSX,
+  Match,
+  Show,
+  Switch,
+  createMemo,
+} from "solid-js";
 
 import { Channel, Server as ServerI } from "stoat.js";
 
@@ -32,17 +39,21 @@ export const Sidebar = (props: {
   const params = useParams<{ server: string }>();
   const location = useLocation();
 
+  /**
+   * Show the channel sidebar panel based on layout state
+   */
+  const showChannelSidebar = () =>
+    state.layout.getSectionState(LAYOUT_SECTIONS.PRIMARY_SIDEBAR, true) &&
+    !location.pathname.startsWith("/discover");
+
   return (
-    <div style={{ display: "flex", "flex-shrink": 0 }}>
+    <div style={{ display: "flex", "flex-shrink": 0, "height": "100%", "width": "100%" }}>
       <ServerList
         orderedServers={state.ordering.orderedServers(client())}
         setServerOrder={state.ordering.setServerOrder}
         unreadConversations={state.ordering
           .orderedConversations(client())
-          .filter(
-            // TODO: muting channels
-            (channel) => channel.unread,
-          )}
+          .filter((channel) => channel.unread)}
         user={user()!}
         selectedServer={() => params.server}
         onCreateOrJoinServer={() =>
@@ -53,12 +64,7 @@ export const Sidebar = (props: {
         }
         menuGenerator={props.menuGenerator}
       />
-      <Show
-        when={
-          state.layout.getSectionState(LAYOUT_SECTIONS.PRIMARY_SIDEBAR, true) &&
-          !location.pathname.startsWith("/discover")
-        }
-      >
+      <Show when={showChannelSidebar()}>
         <Switch fallback={<Home />}>
           <Match when={params.server}>
             <Server />
@@ -85,24 +91,20 @@ const Home: Component = () => {
       conversations={conversations}
       channelId={params().channelId}
       openSavedNotes={(navigate) => {
-        // Check whether the saved messages channel exists already
         const channelId = [...client()!.channels.values()].find(
           (channel) => channel.type === "SavedMessages",
         )?.id;
 
         if (navigate) {
           if (channelId) {
-            // Navigate if exists
             navigate(`/channel/${channelId}`);
           } else {
-            // If not, try to create one but only if navigating
             client()!
               .user!.openDM()
               .then((channel) => navigate(`/channel/${channel.id}`));
           }
         }
 
-        // Otherwise return channel ID if available
         return channelId;
       }}
     />
@@ -117,31 +119,14 @@ const Server: Component = () => {
   const params = useSmartParams();
   const client = useClient();
 
-  /**
-   * Resolve the server
-   * @returns Server
-   */
   const server = () => client()!.servers.get(params().serverId!)!;
 
-  /**
-   * Open the server information modal
-   */
   function openServerInfo() {
-    openModal({
-      type: "server_info",
-      server: server(),
-    });
+    openModal({ type: "server_info", server: server() });
   }
 
-  /**
-   * Open the server settings modal
-   */
   function openServerSettings() {
-    openModal({
-      type: "settings",
-      config: "server",
-      context: server(),
-    });
+    openModal({ type: "settings", config: "server", context: server() });
   }
 
   return (

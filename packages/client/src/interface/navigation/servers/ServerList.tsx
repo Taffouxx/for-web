@@ -1,6 +1,6 @@
 import { Accessor, For, JSX, Show, createMemo, createSignal } from "solid-js";
 
-import { Trans } from "@lingui-solid/solid/macro";
+import { Trans, useLingui } from "@lingui-solid/solid/macro";
 import { Channel, Server, User } from "stoat.js";
 import { cva } from "styled-system/css";
 import { styled } from "styled-system/jsx";
@@ -67,6 +67,7 @@ interface Props {
  */
 export const ServerList = (props: Props) => {
   const state = useState();
+  const { t } = useLingui();
   const client = useClient();
   const navigate = useNavigate();
   const { openModal } = useModals();
@@ -125,7 +126,7 @@ export const ServerList = (props: Props) => {
           href="/app"
           use:floating={{
             tooltip: {
-              content: `You have ${homeNotifications()} pending friend requests.`,
+              content: t`You have ${homeNotifications()} pending friend requests.`,
               placement: "right",
             },
           }}
@@ -168,7 +169,7 @@ export const ServerList = (props: Props) => {
           <UserMenu anchor={menuButton} />
         </Tooltip>
         <Show when={!window.native}>
-          <Tooltip placement="right" content="Switch back to legacy app">
+          <Tooltip placement="right" content={t`Switch back to legacy app`}>
             <a href="https://app.revolt.chat" class={entryContainer()}>
               <Symbol>history</Symbol>
             </a>
@@ -294,7 +295,7 @@ export const ServerList = (props: Props) => {
             </Tooltip>
           )}
         </Draggable>
-        <Tooltip placement="right" content={"Create or join a server"}>
+        <Tooltip placement="right" content={t`Create or join a server`}>
           <a
             class={entryContainer()}
             onClick={() => props.onCreateOrJoinServer()}
@@ -303,7 +304,7 @@ export const ServerList = (props: Props) => {
           </a>
         </Tooltip>
         <Show when={CONFIGURATION.IS_STOAT}>
-          <Tooltip placement="right" content={"Find new servers to join"}>
+          <Tooltip placement="right" content={t`Find new servers to join`}>
             <a
               href={state.layout.getLastActiveDiscoverPath()}
               class={entryContainer()}
@@ -316,7 +317,7 @@ export const ServerList = (props: Props) => {
       <Shadow>
         <div />
       </Shadow>
-      <Tooltip placement="right" content="Settings">
+      <Tooltip placement="right" content={t`Settings`}>
         <a
           class={entryContainer()}
           onClick={() => openModal({ type: "settings", config: "user" })}
@@ -335,7 +336,7 @@ const ServerListBase = styled("div", {
   base: {
     display: "flex",
     flexDirection: "column",
-
+    flexShrink: 0,
     fill: "var(--md-sys-color-on-surface)",
   },
 });
