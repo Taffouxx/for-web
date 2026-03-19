@@ -897,6 +897,10 @@ msgstr "Create Invite"
 msgid "Create invites for others to use"
 msgstr "Create invites for others to use"
 
+#: src/interface/navigation/servers/ServerList.tsx
+msgid "Create or join a server"
+msgstr "Create or join a server"
+
 #: components/modal/modals/CreateRole.tsx
 #: components/app/interface/settings/server/roles/ServerRoleOverview.tsx
 msgid "Create Role"
@@ -1078,10 +1082,6 @@ msgstr "Discord RPC"
 msgid "Discover Zeelo"
 msgstr "Discover Zeelo"
 
-#: src/interface/Home.tsx
-#~ msgid "Discover Zeelo"
-#~ msgstr "Discover Zeelo"
-
 #: components/app/interface/settings/user/appearance/AppearanceMenu.tsx
 msgid "Display & Text"
 msgstr "Display & Text"
@@ -1113,10 +1113,6 @@ msgstr "Donate"
 #: src/interface/Home.tsx
 msgid "Donate to Zeelo"
 msgstr "Donate to Zeelo"
-
-#: src/interface/Home.tsx
-#~ msgid "Donate to Zeelo"
-#~ msgstr "Donate to Zeelo"
 
 #: components/ui/components/features/profiles/ProfileBadges.tsx
 msgid "Donated to Zeelo"
@@ -1283,9 +1279,21 @@ msgstr "Failed to verify!"
 msgid "Feedback"
 msgstr "Feedback"
 
+#: src/interface/channels/text/Composition.tsx
+msgid "File too large"
+msgstr "File too large"
+
+#: src/interface/channels/text/Composition.tsx
+msgid "Files too large"
+msgstr "Files too large"
+
 #: src/interface/Home.tsx
 msgid "Find a community based on your hobbies or interests."
 msgstr "Find a community based on your hobbies or interests."
+
+#: src/interface/navigation/servers/ServerList.tsx
+msgid "Find new servers to join"
+msgstr "Find new servers to join"
 
 #: components/auth/src/flows/FlowHome.tsx
 msgid "Find your com<0/>munity,<1/>connect with the world."
@@ -1356,10 +1364,6 @@ msgstr "Get active recovery codes"
 msgid "Give feedback on Zeelo"
 msgstr "Give feedback on Zeelo"
 
-#: src/interface/Home.tsx
-#~ msgid "Give feedback on Zeelo"
-#~ msgstr "Give feedback on Zeelo"
-
 #: components/modal/modals/ReportContent.tsx
 msgid "Give us some detail"
 msgstr "Give us some detail"
@@ -1376,10 +1380,9 @@ msgstr "Go back to login"
 msgid "Go to account settings to edit your username"
 msgstr "Go to account settings to edit your username"
 
-#: src/interface/Home.tsx
 #: components/app/interface/settings/user/Feedback.tsx
-msgid "Go to the Zeelo Lounge"
-msgstr "Go to the Zeelo Lounge"
+msgid "Go to the Stoat Lounge"
+msgstr "Go to the Stoat Lounge"
 
 #: src/interface/Home.tsx
 #: src/interface/Home.tsx
@@ -1390,6 +1393,10 @@ msgstr "Go to the Zeelo Lounge"
 #: components/app/interface/settings/user/Feedback.tsx
 #~ msgid "Go to the Zeelo Lounge"
 #~ msgstr "Go to the Zeelo Lounge"
+
+#: src/interface/Home.tsx
+msgid "Go to Zeelo Lounge"
+msgstr "Go to Zeelo Lounge"
 
 #: components/modal/modals/Onboarding.tsx
 msgid "Good"
@@ -1472,8 +1479,8 @@ msgid "Impersonation"
 msgstr "Impersonation"
 
 #: components/app/interface/settings/user/Native.tsx
-msgid "Instead of closing, Zeelo will hide in your tray."
-msgstr "Instead of closing, Zeelo will hide in your tray."
+msgid "Instead of closing, Stoat will hide in your tray."
+msgstr "Instead of closing, Stoat will hide in your tray."
 
 #: components/app/interface/settings/user/Native.tsx
 #~ msgid "Instead of closing, Zeelo will hide in your tray."
@@ -1537,10 +1544,9 @@ msgstr "Join a server"
 #~ msgid "Join call"
 #~ msgstr "Join call"
 
-#: src/interface/Home.tsx
 #: components/app/interface/settings/user/Feedback.tsx
-msgid "Join the Zeelo Lounge"
-msgstr "Join the Zeelo Lounge"
+msgid "Join the Stoat Lounge"
+msgstr "Join the Stoat Lounge"
 
 #: components/ui/components/features/voice/callCard/VoiceCallCardPreview.tsx
 msgid "Join the voice channel"
@@ -1550,6 +1556,10 @@ msgstr "Join the voice channel"
 #: components/app/interface/settings/user/Feedback.tsx
 #~ msgid "Join the Zeelo Lounge"
 #~ msgstr "Join the Zeelo Lounge"
+
+#: src/interface/Home.tsx
+msgid "Join Zeelo Lounge"
+msgstr "Join Zeelo Lounge"
 
 #: components/ui/components/features/profiles/ProfileJoined.tsx
 #: components/ui/components/features/messaging/elements/Invite.tsx
@@ -1602,16 +1612,16 @@ msgid "Latest"
 msgstr "Latest"
 
 #: components/app/interface/settings/user/Native.tsx
-msgid "Launch Zeelo when you log into your computer."
-msgstr "Launch Zeelo when you log into your computer."
+msgid "Launch Stoat when you log into your computer."
+msgstr "Launch Stoat when you log into your computer."
 
 #: components/app/interface/settings/user/Native.tsx
 #~ msgid "Launch Zeelo when you log into your computer."
 #~ msgstr "Launch Zeelo when you log into your computer."
 
 #: components/app/interface/settings/user/bots/MyBots.tsx
-msgid "Learn more about how to create bots on Zeelo."
-msgstr "Learn more about how to create bots on Zeelo."
+msgid "Learn more about how to create bots on Stoat."
+msgstr "Learn more about how to create bots on Stoat."
 
 #: components/app/interface/settings/user/bots/MyBots.tsx
 #~ msgid "Learn more about how to create bots on Zeelo."
@@ -1638,8 +1648,8 @@ msgid "Leave server"
 msgstr "Leave server"
 
 #: components/app/interface/settings/user/Native.tsx
-msgid "Let Zeelo use its own custom titlebar."
-msgstr "Let Zeelo use its own custom titlebar."
+msgid "Let Stoat use its own custom titlebar."
+msgstr "Let Stoat use its own custom titlebar."
 
 #: src/interface/Home.tsx
 msgid "Let us know how we can improve our app by giving us feedback."
@@ -1929,8 +1939,8 @@ msgid "New Password"
 msgstr "New Password"
 
 #: components/app/interface/channels/text/Message.tsx
-msgid "New to Zeelo"
-msgstr "New to Zeelo"
+msgid "New to Stoat"
+msgstr "New to Stoat"
 
 #: components/app/interface/channels/text/Message.tsx
 msgid "New to the server"
@@ -1943,6 +1953,10 @@ msgstr "New to the server"
 #: components/modal/modals/ServerIdentity.tsx
 msgid "Nickname"
 msgstr "Nickname"
+
+#: src/interface/ServerHome.tsx
+msgid "No channels!"
+msgstr "No channels!"
 
 #: components/app/interface/settings/channel/permissions/ChannelPermissionsOverview.tsx
 msgid "No permissions set yet"
@@ -2040,6 +2054,10 @@ msgstr "Open {0}"
 #: components/app/menus/ChannelContextMenu.tsx
 msgid "Open channel settings"
 msgstr "Open channel settings"
+
+#: src/interface/Home.tsx
+msgid "Open Development Page"
+msgstr "Open Development Page"
 
 #: components/app/menus/MessageContextMenu.tsx
 msgid "Open file"
@@ -2279,8 +2297,8 @@ msgid "Rename Session"
 msgstr "Rename Session"
 
 #: components/app/interface/settings/user/Native.tsx
-msgid "Rep Zeelo using Discord rich presence."
-msgstr "Rep Zeelo using Discord rich presence."
+msgid "Rep Stoat using Discord rich presence."
+msgstr "Rep Stoat using Discord rich presence."
 
 #: components/app/interface/settings/user/Native.tsx
 #~ msgid "Rep Zeelo using Discord rich presence."
@@ -2414,6 +2432,10 @@ msgstr "Search for groups..."
 msgid "Search for users..."
 msgstr "Search for users..."
 
+#: src/interface/channels/ChannelHeader.tsx
+msgid "Search messages..."
+msgstr "Search messages..."
+
 #: components/app/interface/settings/user/Feedback.tsx
 #~ msgid "See what we're currently working on."
 #~ msgstr "See what we're currently working on."
@@ -2531,6 +2553,7 @@ msgstr "Sessions"
 msgid "Set your status"
 msgstr "Set your status"
 
+#: src/interface/navigation/servers/ServerList.tsx
 #: components/modal/modals/ServerInfo.tsx
 msgid "Settings"
 msgstr "Settings"
@@ -2561,8 +2584,8 @@ msgid "Show send message button"
 msgstr "Show send message button"
 
 #: components/auth/src/flows/FlowLogin.tsx
-msgid "Sign into Zeelo"
-msgstr "Sign into Zeelo"
+msgid "Sign into Stoat"
+msgstr "Sign into Stoat"
 
 #: components/auth/src/flows/FlowLogin.tsx
 #~ msgid "Sign into Zeelo"
@@ -2634,16 +2657,16 @@ msgid "Status"
 msgstr "Status"
 
 #: components/app/interface/settings/user/Native.tsx
-msgid "Zeelo for Desktop"
-msgstr "Zeelo for Desktop"
+msgid "Stoat for Desktop"
+msgstr "Stoat for Desktop"
 
 #: components/auth/src/flows/FlowHome.tsx
-msgid "Zeelo is one of the best ways to stay connected with your friends and community, anywhere, anytime."
-msgstr "Zeelo is one of the best ways to stay connected with your friends and community, anywhere, anytime."
+msgid "Stoat is one of the best ways to stay connected with your friends and community, anywhere, anytime."
+msgstr "Stoat is one of the best ways to stay connected with your friends and community, anywhere, anytime."
 
 #: components/app/interface/settings/user/Native.tsx
-msgid "Zeelo will start in the system tray."
-msgstr "Zeelo will start in the system tray."
+msgid "Stoat will start in the system tray."
+msgstr "Stoat will start in the system tray."
 
 #: components/app/interface/settings/user/Feedback.tsx
 msgid "Submit feature suggestion"
@@ -2662,8 +2685,8 @@ msgid "Subscriptions"
 msgstr "Subscriptions"
 
 #: components/app/interface/settings/user/Feedback.tsx
-msgid "Suggest new Zeelo features on GitHub discussions."
-msgstr "Suggest new Zeelo features on GitHub discussions."
+msgid "Suggest new Stoat features on GitHub discussions."
+msgstr "Suggest new Stoat features on GitHub discussions."
 
 #: components/app/interface/settings/user/Feedback.tsx
 #~ msgid "Suggest new Zeelo features on GitHub discussions."
@@ -2672,6 +2695,10 @@ msgstr "Suggest new Zeelo features on GitHub discussions."
 #: src/interface/Home.tsx
 msgid "Support the project by donating - thank you!"
 msgstr "Support the project by donating - thank you!"
+
+#: src/interface/navigation/servers/ServerList.tsx
+msgid "Switch back to legacy app"
+msgstr "Switch back to legacy app"
 
 #: components/ui/components/features/voice/callCard/VoiceCallCardPreview.tsx
 msgid "Switch to this voice channel"
@@ -2858,6 +2885,10 @@ msgstr "Unblock user"
 #: components/i18n/errors.ts
 msgid "Uncaught Zeelo error: {0}"
 msgstr "Uncaught Zeelo error: {0}"
+
+#: src/interface/channels/ChannelPage.tsx
+msgid "Unknown channel type!"
+msgstr "Unknown channel type!"
 
 #: components/markdown/plugins/anchors.tsx
 msgid "Unknown Server"
@@ -3194,6 +3225,11 @@ msgstr "You do not have permission to do this."
 msgid "You don't have permission to send messages in this channel."
 msgstr "You don't have permission to send messages in this channel."
 
+#. placeholder {0}: homeNotifications()
+#: src/interface/navigation/servers/ServerList.tsx
+msgid "You have {0} pending friend requests."
+msgstr "You have {0} pending friend requests."
+
 #: components/i18n/errors.ts
 msgid "You have been locked out for entering a wrong password multiple times. Please wait a couple minutes and try again."
 msgstr "You have been locked out for entering a wrong password multiple times. Please wait a couple minutes and try again."
@@ -3241,8 +3277,8 @@ msgid "You've been invited to join this server.<0/>Would you like to join?"
 msgstr "You've been invited to join this server.<0/>Would you like to join?"
 
 #: components/modal/modals/SignedOut.tsx
-msgid "You've been signed out of Zeelo!"
-msgstr "You've been signed out of Zeelo!"
+msgid "You've been signed out of Stoat!"
+msgstr "You've been signed out of Stoat!"
 
 #: components/modal/modals/SignedOut.tsx
 #~ msgid "You've been signed out of Zeelo!"
@@ -3308,78 +3344,3 @@ msgstr "Zeelo Founder"
 #: components/app/interface/settings/user/Native.tsx
 #~ msgid "Zeelo will start in the system tray."
 #~ msgstr "Zeelo will start in the system tray."
-
-msgid "Search messages..."
-msgstr "Search messages..."
-
-msgid "No channels!"
-msgstr "No channels!"
-
-msgid "Unknown channel type!"
-msgstr "Unknown channel type!"
-
-msgid "Settings"
-msgstr "Settings"
-
-msgid "Switch back to legacy app"
-msgstr "Switch back to legacy app"
-
-msgid "Create or join a server"
-msgstr "Create or join a server"
-
-msgid "Find new servers to join"
-msgstr "Find new servers to join"
-
-msgid "File too large"
-msgstr "File too large"
-
-msgid "Files too large"
-msgstr "Files too large"
-
-msgid "Server Identities"
-msgstr "Server Identities"
-
-msgid "Change your profile per-server"
-msgstr "Change your profile per-server"
-
-msgid "Edit Global Profile"
-msgstr "Edit Global Profile"
-
-msgid "Banner"
-msgstr "Banner"
-
-msgid "Display Name"
-msgstr "Display Name"
-
-msgid "Want to change username?"
-msgstr "Want to change username?"
-
-msgid "Go to account settings to edit your username"
-msgstr "Go to account settings to edit your username"
-
-msgid "Profile Bio"
-msgstr "Profile Bio"
-
-msgid "Save"
-msgstr "Save"
-
-msgid "Reset"
-msgstr "Reset"
-
-msgid "Profile"
-msgstr "Profile"
-
-msgid "Home"
-msgstr "Home"
-
-msgid "Create a group or server"
-msgstr "Create a group or server"
-
-msgid "You can also click the gear icon in the bottom left."
-msgstr "You can also click the gear icon in the bottom left."
-
-msgid "Open Development Page"
-msgstr "Open Development Page"
-
-msgid "You have {0} pending friend requests."
-msgstr "You have {0} pending friend requests."
